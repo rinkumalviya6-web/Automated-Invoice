@@ -1,4 +1,36 @@
 # Automated-Invoice
+🧾 Invoice Generator (Excel + VBA Automation)
+This project is a simple yet powerful Invoice Generator tool built using Excel and VBA. With just one click, it automatically fills the invoice template, generates a PDF, and saves it to a specified folder — perfect for freelancers, small businesses, or anyone who needs to create multiple invoices quickly.
+
+⚙️ How It Works
+1.Invoice Template Setup
+   Start by selecting the invoice template and customize it based on your business needs:
+    Add your logo, company details, and desired styling
+    Make sure all invoice data (client, amount, items, etc.) is placed in clearly defined cells
+    Set the template to fit on one page for clean PDF export
+2.VBA Automation Code
+  The VBA code:
+  Fills the invoice fields automatically
+  Exports the invoice as a PDF file
+  Saves the PDF to a predefined folder path 
+  (You can change the path in the VBA script to match your preferred location.)
+3.One-Click Output
+  After setting everything up, simply click the “Generate Invoice” button to:
+  Fill the invoice
+  Export it as a PDF
+  Automatically save the PDF file with a unique name (like Invoice_001.pdf)
+
+📂 Files Included
+   Invoice Template.xlsx – Editable invoice layout
+   Invoice_Automation.bas – VBA module with full code
+   Sample Output.pdf – A sample generated invoice (PDF)
+
+🔐 Customization Tips
+    Update your logo and branding in the template
+    Modify cell ranges in the VBA code if your layout is different
+    Adjust file path and file name formatting as needed
+    
+Code:
 Sub GenerateFinalInvoices3()
 
     Dim wsData As Worksheet, wsTemplate As Worksheet, newInvoice As Worksheet
@@ -60,20 +92,20 @@ Sub GenerateFinalInvoices3()
             .Range("G6").Value = invoiceDate
             .Range("G8").Value = wsData.Cells(entryRow, 3).Value 'Invoice No
             ' Reset totals
- discountTotal = 0
- shippingTotal = 0
- totaltaxTotal = 0
+      discountTotal = 0
+      shippingTotal = 0
+      totaltaxTotal = 0
 
-' Loop through this company’s rows and sum properly
-For Each entryRow In dict(companyName)
+    ' Loop through this company’s rows and sum properly
+    For Each entryRow In dict(companyName)
     discountTotal = discountTotal + wsData.Cells(entryRow, "N").Value
     shippingTotal = shippingTotal + wsData.Cells(entryRow, "R").Value
     totaltaxTotal = totaltaxTotal + wsData.Cells(entryRow, "Q").Value
-Next entryRow
+    Next entryRow
 
-.Range("G34").Value = discountTotal
-.Range("G38").Value = shippingTotal
-.Range("G37").Value = totaltaxTotal
+     .Range("G34").Value = discountTotal
+     .Range("G38").Value = shippingTotal
+     .Range("G37").Value = totaltaxTotal
            
             ' Add more mapping here if needed for line items
 
