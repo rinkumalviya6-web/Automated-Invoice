@@ -60,9 +60,9 @@ Sub GenerateFinalInvoices3()
             .Range("G6").Value = invoiceDate
             .Range("G8").Value = wsData.Cells(entryRow, 3).Value 'Invoice No
             ' Reset totals
-discountTotal = 0
-shippingTotal = 0
-totaltaxTotal = 0
+ discountTotal = 0
+ shippingTotal = 0
+ totaltaxTotal = 0
 
 ' Loop through this company’s rows and sum properly
 For Each entryRow In dict(companyName)
