@@ -30,8 +30,8 @@ This project is a simple yet powerful Invoice Generator tool built using Excel a
     Modify cell ranges in the VBA code if your layout is different
     Adjust file path and file name formatting as needed
     
-Code:
-Sub GenerateFinalInvoices3()
+    Code:
+     Sub GenerateFinalInvoices3()
 
     Dim wsData As Worksheet, wsTemplate As Worksheet, newInvoice As Worksheet
     Dim dict As Object, companyName As Variant
