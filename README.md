@@ -1,5 +1,5 @@
 # Automated-Invoice
-<a href="https://drive.google.com/file/d/16_JaxCKoL-fvC35SjxS5Pm34jpArSTrK/view?usp=sharing"> click here for video</a>
+
 🧾 Invoice Generator (Excel + VBA Automation)
 This project is a simple yet powerful Invoice Generator tool built using Excel and VBA. With just one click, it automatically fills the invoice template, generates a PDF, and saves it to a specified folder — perfect for freelancers, small businesses, or anyone who needs to create multiple invoices quickly.
 
